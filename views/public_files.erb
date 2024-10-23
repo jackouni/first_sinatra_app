@@ -13,5 +13,13 @@
 
 	<body>
 		<h1>Welcome!</h1>
+
+    <ul>
+      <% @public_files.each do |file_name| %>
+        <li>
+          <a href="/<%= file_name %>"> <%=file_name%> </a>
+        </li>
+      <% end %>
+    </ul>
 	</body>
 </html>
