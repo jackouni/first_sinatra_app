@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Sinatra App</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <br>
+
+  <%= yield %> 
+
+  <br>
+
+  <footer>
+    <p>&copy; <%= Time.now.year %> My App</p>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
