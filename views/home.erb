@@ -18,6 +18,16 @@
 
   <br>
 
+  <br>
+
+  <% total_users = @users.size %>
+  <% total_interests = 0 %>
+  <% @users.each do |_, user_data| %>
+    <% total_interests += user_data[:interests].size %>
+  <% end %>
+
+  <h4> There are a total of <%= total_users %> users and with a collective of <%= total_interests %> </h4>
+
   <footer>
     <p>&copy; <%= Time.now.year %> My App</p>
   </footer>
