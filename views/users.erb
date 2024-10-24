@@ -1,6 +1,6 @@
 <h2> List of Users: </h2>
 <% @users.each do |name, _| %>
   <ul>
-    <li><a href= <%= "/#{name}" %> > <%= name %> </a></li>
+    <li><a href= <%= "/user/#{name}" %> > <%= name %> </a></li>
   </ul>
 <% end %>

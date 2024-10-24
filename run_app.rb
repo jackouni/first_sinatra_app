@@ -8,7 +8,15 @@ before do
   @users = YAML.load(@users_file)
 end
 
+helpers do 
+end
+
 get "/" do
   erb :users, layout: :home
 end
 
+get "/user/:name" do
+  @name = params[:name]
+  @user = @users[@name.to_sym]
+  erb :user, layout: :home
+end
