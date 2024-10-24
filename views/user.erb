@@ -6,3 +6,16 @@
 
 <h3> Email: <%= @user[:email] %> </h3>
 <h3> Interests: <%= @user[:interests].join(', ') %> </h3>
+
+<br>
+<br>
+
+<h3> Other Users: </h3>
+
+<ul>
+  <% @users.each do |name, info| %>
+    <% name = name.to_s %>
+    <% next if name == @name %>
+    <li><a href= <%= "/user/#{name}" %> > <%= name %> </a></li>
+  <% end %>
+</ul>
